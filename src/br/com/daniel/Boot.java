@@ -14,7 +14,7 @@ public class Boot {
         System.out.print("Digite sua altura: ");
         paciente.setAltura(scanner.nextDouble());
 
-        System.out.print("Digite seu peso: ");
+        System.out.print("Digite seu peso atual: ");
         paciente.setPeso(scanner.nextInt());
 
         paciente.calculoDeMassaCorporal();
