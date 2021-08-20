@@ -1,22 +1,20 @@
-package calcular_imc;
+import java.util.Scanner;
 
 public class IMC {
-	
-	String abaixoDoPeso = "Ele está abaixo do peso!";
-	String pesoIdeal = "Ele está no peso ideal!";
-	String acimaDoPeso = "Ele está acima do peso!";
-	String pacienteObeso = "Ele está obeso!";
-	double imcPaciente;
-	
-	void resultadoDoIMCDoPaciente() {
-	if (imcPaciente <= 18.5) {
-		System.out.println(abaixoDoPeso);
-	} else if (imcPaciente <= 25.5) {
-		System.out.println(pesoIdeal);
-	} else if (imcPaciente <= 30.0) {
-		System.out.println(acimaDoPeso);
-	} else if (imcPaciente >= 30.1) {
-		System.out.println(pacienteObeso);
-	}
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner (System.in);
+		
+		System.out.print("Digite seu peso: ");
+		Double pesoDoCliente = scanner.nextDouble();
+		
+		System.out.print("Digite sua altura: ");
+		Double alturaDoCliente = scanner.nextDouble();
+		
+		Double multiplicacao = alturaDoCliente * alturaDoCliente;
+		
+		Double resultado = pesoDoCliente / multiplicacao;
+		System.out.println("IMC: " + resultado);
+		
+		scanner.close();
 	}
 }
